@@ -1,0 +1,20 @@
+@mixin mediaTablet {
+	@media screen and (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin mediaTabletMobile {
+	@media screen and (max-width: $tablet-mobile) {
+		@content;
+	}
+}
+
+@mixin burgerBtn {
+	content: '';
+	display: block;
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background: $white;
+}

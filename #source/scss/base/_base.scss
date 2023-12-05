@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+body {
+	font-family: $font-main;
+	color: $grey;
+	background-color: $white;
+	font-size: 16px;
+	min-width: 320px;
+}
+
+a {
+	color: $accent;
+	line-height: 20px;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 15px;
+}
+
+.link {
+	color: $white;
+	background-color: $accent;
+	box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+	border-radius: 30px;
+	padding: 15px 36px;
+
+	&:hover {
+		background-color: #326ad9;
+		box-shadow: 0px 0px 10px $accent, 0px 0px 20px $accent, 0px 0px 30px $accent;
+	}
+
+	@include mediaTablet {
+		font-size: 16px;
+	}
+	@include mediaTabletMobile {
+		font-size: 14px;
+		padding: 13px 20px;
+	}
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 53px;
+	color: $dark;
+
+	@include mediaTablet {
+		font-size: 27px;
+		line-height: 33px;
+	}
+	@include mediaTabletMobile {
+		font-size: 18px;
+		line-height: 20px;
+	}
+}
+.text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	color: $grey;
+
+	@include mediaTablet {
+		font-size: 16px;
+	}
+	@include mediaTabletMobile {
+		font-size: 7px;
+	}
+}
+
+.none {
+	display: none;
+}

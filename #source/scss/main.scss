@@ -1,0 +1,20 @@
+// Base
+@import 'base/reset'; // сброс стилей
+@import 'base/vars'; // переменные
+@import 'base/mixin'; // переменные
+@import 'base/base'; // базовые элементы
+
+//Block
+@import 'block/header'; // заголовок
+@import 'block/services';
+@import 'block/about-us';
+@import 'block/all-services';
+@import 'block/all-projects';
+@import 'block/video';
+@import 'block/subcribe';
+@import 'block/footer';
+@import 'block/menu__burger';
+
+//Animation
+@import 'base/animation';
+

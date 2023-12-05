@@ -1,0 +1,17 @@
+// Open Burger Menu
+@keyframes animateMenuBurgerOpen {
+	0% {
+		transform: translateX(-150%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes animateMenuBurgerClose {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-150%);
+	}
+}

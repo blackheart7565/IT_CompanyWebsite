@@ -1,0 +1,125 @@
+._menu {
+	// ._menu__burger-mobile
+	&__burger-mobile {
+		position: fixed;
+		top: 0;
+		left: -150%;
+		width: 100%;
+		height: 100%;
+		background: #ffffff2d;
+		backdrop-filter: blur(2px);
+		transition: left 1s;
+
+		@include mediaTablet {
+			&._opened {
+				left: 0;
+			}
+		}
+	}
+
+	// ._menu__burger-mobile--inner
+	&__burger-mobile--inner {
+		width: 70%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -150%;
+		background: $dark;
+		transition: left 1.3s;
+
+		@include mediaTablet {
+			padding: 30px;
+			&._openedInner {
+				overflow: auto;
+				left: 0;
+			}
+		}
+		@include mediaTabletMobile {
+			padding: 0;
+		}
+	}
+	// ._menu__burger-nav
+	&__burger-nav {
+		@include mediaTablet {
+			box-shadow: 0px 0px 10px $grey;
+		}
+		@include mediaTabletMobile {
+			box-shadow: 0px 0px 10px $grey;
+		}
+	}
+	// ._menu__burger-list
+	&__burger-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+		padding: 20px 0;
+	}
+	// ._menu__burger-item
+	&__burger-item {
+		text-align: center;
+
+		@include mediaTablet {
+			width: 80%;
+			padding: 10px 0;
+		}
+		@include mediaTabletMobile {
+			width: 100%;
+			padding: 0;
+		}
+	}
+	// ._menu__burger-link
+	&__burger-link {
+		display: block;
+		color: $white;
+		padding: 15px 0;
+
+		@include mediaTablet {
+			box-shadow: 0px 0px 10px $grey;
+			font-size: 14px;
+		}
+		@include mediaTabletMobile {
+			box-shadow: 0px 0px 5px $grey;
+			font-size: 14px;
+		}
+	}
+	// ._menu__nav-btn
+	&__nav-btn {
+		background: $menu-bg;
+		width: 40px;
+		height: 40px;
+		border-radius: 0px 0px 8px 0px;
+
+		position: absolute;
+		top: -10%;
+		left: 70%;
+
+		transition: top 1s ease-in-out;
+
+		@include mediaTablet {
+			&._activeBtnMenu {
+				overflow: auto;
+				top: 0;
+			}
+		}
+	}
+	// ._menu__nav-icon
+	&__nav-icon {
+		background: transparent;
+		height: 3px;
+		width: 25px;
+		position: relative;
+
+		&:before,
+		&:after {
+			@include burgerBtn;
+			left: 30%;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}

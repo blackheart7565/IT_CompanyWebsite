@@ -1,0 +1,114 @@
+.subcribe {
+	max-width: 730px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 85px;
+
+	@include mediaTabletMobile {
+		margin-bottom: 25px;
+	}
+
+	// .subcribe__form
+	&__form {
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			display: grid;
+			grid-template-rows: 1fr 1fr;
+			justify-content: center;
+			justify-items: center;
+		}
+	}
+	// .subcribe__title
+	&__title {
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		color: $black;
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+	}
+	// .subcribe__text
+	&__text {
+		margin-bottom: 30px;
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			margin-bottom: 20px;
+			font-size: 8px;
+		}
+	}
+	// .subcribe__input, .subcribe__btn
+	&__input,
+	&__btn {
+		margin-bottom: 35px;
+		box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			margin-bottom: 20px;
+		}
+	}
+	// .subcribe__input
+	&__input {
+		width: 300px;
+		border-radius: 30px 0 0 30px;
+		padding: 15px 10px 15px 33px;
+		border: 1px solid #f2f2f2;
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			border-radius: 30px;
+			padding: 15px 20px;
+			width: 220px;
+			height: 35px;
+			box-shadow: 0px 0px 2px $dark;
+		}
+	}
+	// .subcribe__btn
+	&__btn {
+		border-radius: 0 30px 30px 0;
+		padding: 15px 36px;
+		background: $accent;
+		color: $white;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+
+		&:hover {
+			background-color: #326ad9;
+			box-shadow: 0px 0px 10px $accent, 0px 0px 20px $accent,
+				0px 0px 30px $accent;
+		}
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			border-radius: 30px;
+			font-size: 10px;
+			padding: 5px 30px;
+			width: 170px;
+			height: 33px;
+		}
+	}
+	// .subcribe__subtext
+	&__subtext {
+		font-size: 13px;
+		line-height: 21px;
+
+		@include mediaTablet {
+		}
+		@include mediaTabletMobile {
+			font-size: 11px;
+		}
+	}
+}
